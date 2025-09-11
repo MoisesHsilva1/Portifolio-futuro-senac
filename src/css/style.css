@@ -49,7 +49,7 @@ header {
 }
 
 .social-icons {
-  margin-left: 33rem;
+  margin-left: 24rem;
 }
 
 nav a {
@@ -74,7 +74,7 @@ nav a::after {
   width: 0;
   height: 3px;
   background: #452c63;
-  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav a:hover,
@@ -555,6 +555,206 @@ i {
   .experiencia-content span {
     font-size: 0.95rem;
     padding: 0.3rem 0.6rem;
+  }
+}
+
+.formacao-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  margin: 2rem 0 1rem 0;
+  padding-left: 2.5rem;
+}
+.formacao-timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #452c63 0%, #151515 100%);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+.formacao-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.formacao-dot {
+  width: 18px;
+  height: 18px;
+  background: #452c63;
+  border-radius: 50%;
+  margin-top: 0.3rem;
+  box-shadow: 0 0 0 4px #452c6320;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+}
+.formacao-content {
+  background: rgba(34, 34, 34, 0.4);
+  border: 1.5px solid #452c63;
+  border-radius: 1.2rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 12px 0 rgba(69, 44, 99, 0.08);
+  min-width: 0;
+  flex: 1;
+}
+.formacao-content h1 {
+  font-size: 2rem;
+  color: #452c63;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.formacao-content p {
+  font-size: 1.4rem;
+  color: #bdbdbd;
+  margin-bottom: 0.5rem;
+}
+.formacao-data {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .formacao-content {
+    padding: 1rem 1.2rem;
+  }
+  .formacao-content h1 {
+    font-size: 1.4rem;
+  }
+  .formacao-content p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 500px) {
+  .formacao-timeline {
+    padding-left: 1.2rem;
+  }
+  .formacao-content {
+    padding: 0.7rem 0.7rem;
+    border-radius: 0.7rem;
+  }
+  .formacao-content h1 {
+    font-size: 1.1rem;
+  }
+  .formacao-content p {
+    font-size: 0.95rem;
+  }
+}
+
+.contato-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(34, 34, 34, 0.4);
+  border: 1.5px solid #452c63;
+  border-radius: 1.2rem;
+  padding: 2rem 2.5rem;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 2px 12px 0 rgba(69, 44, 99, 0.08);
+  flex: 1;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input,
+.input-group textarea {
+  background: #151515;
+  border: 1px solid #452c63;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  resize: none;
+  margin-top: 0.2rem;
+  transition: border 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border: 1.5px solid #fff;
+}
+
+.input-group textarea {
+  min-height: 90px;
+  max-height: 200px;
+}
+
+.btn-enviar {
+  background: #452c63;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 1rem 2.2rem;
+  cursor: pointer;
+  transition: 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px 0 rgba(69, 44, 99, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.btn-enviar:hover {
+  background: #fff;
+  color: #452c63;
+  box-shadow: 0 4px 24px 0 rgba(69, 44, 99, 0.12);
+}
+
+.contato-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+  min-width: 180px;
+}
+
+.contato-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+  color: #452c63;
+  background: #151515;
+  border: 1px solid #452c63;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1.2rem;
+  transition: 0.3s, color 0.3s;
+  font-weight: 500;
+}
+
+.contato-link:hover {
+  background: #452c63;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .contato-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contato-form {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
